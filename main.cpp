@@ -107,7 +107,7 @@ void highestGrade(Student students[], int count)
 }
 void lowestGrade(Student students[], int count)
 {
-  if (count = 0) return;
+  if (count == 0) return;
   float low = students[0].studentGrades;
   for (int i = 1; i < count; i++) {
     if (students[i].studentGrades < low) {
@@ -119,9 +119,9 @@ void lowestGrade(Student students[], int count)
 
 void averageGrade(Student students[], int count)
 {
-  if (count = 0) return;
+  if (count == 0) return;
   float sum = 0;
-  for (int i = 0; i < cout; i++) {
+  for (int i = 0; i < count; i++) {
     sum += students[i].studentGrades; // Add all grades up
   }
   cout << "The class average is: " << (sum / count) << endl;
@@ -129,14 +129,16 @@ void averageGrade(Student students[], int count)
 void printStudentId(Student students[], int count)
 {
   cout << "List of Students IDs:\n";
-  for (int i = 0; 1 < count; i++) {
+  for (int i = 0; i < count; i++) {
     cout << students[i].studentId << endl;
+  }
 }
 void printStudentName(Student students[], int count)
 {
-  cout << "List of Studenys Names:\n"
-  for (int i = 0; 1 < count; i++) {
+  cout << "List of Studenys Names:\n";
+  for (int i = 0; i < count; i++) {
     cout << students[i].studentName << endl;
+  }
 }
 
 

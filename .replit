@@ -70,3 +70,26 @@ start = "ccls"
 
 [agent]
 expertMode = true
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Run Program"
+
+[[workflows.workflow]]
+name = "Run Program"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "g++ main.cpp -o main && ./main"
+
+[workflows.workflow.metadata]
+outputType = "console"
